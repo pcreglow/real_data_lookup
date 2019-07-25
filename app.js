@@ -11,7 +11,7 @@ $.ajax({
     data: formData,
     success: function(data) {
         console.log(data);
-        console.lgo(data.potential_voter_matches)
+        console.log(data.potential_voter_matches)
     }
 });
 // var voters = <?php echo $r; ?>;
