@@ -3,17 +3,15 @@ $(document).ready(function() {
 // write your code here
 $('#real_search').submit(function(e) {
         e.preventDefault();
+var formData = $('#real_search').serialize();
+console.log(formData);
 $.ajax({
     type: "GET",
     url: "ts_data.php",
-    headers: {'Access-Control-Allow-Origin': '*'},
-    data: {
-        first_name: 'Phillip',
-        last_name: 'Creglow',
-        state: 'FL'
-    },
+    data: formData,
     success: function(data) {
         console.log(data);
+        console.lgo(data.potential_voter_matches)
     }
 });
 // var voters = <?php echo $r; ?>;
