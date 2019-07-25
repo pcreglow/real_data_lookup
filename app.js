@@ -11,7 +11,12 @@ $.ajax({
     data: formData,
     success: function(data) {
         console.log(data);
-        console.log(potential_voter_matches[0]['cell.tsmart_wireless_phone']);
+        var voters = data;
+        console.log(voters.potential_voter_matches);
+        var potential_matches = voters.potential_voter_matches;
+        console.log(potential_matches[0]['cell.tsmart_wireless_phone']);
+        console.log(potential_matches[0]['vb.tsmart_first_name']);
+        console.log(potential_matches[0]['vb.tsmart_last_name']);
     }
 });
 // var voters = <?php echo $r; ?>;
