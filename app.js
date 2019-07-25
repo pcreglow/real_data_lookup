@@ -8,7 +8,7 @@ console.log(formData);
 $.ajax({
     type: "GET",
     url: "ts_data.php",
-    dataType: json,
+    dataType: "json",
     data: formData,
     success: function(data) {
         console.log(data);
