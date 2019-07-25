@@ -11,7 +11,7 @@ $.ajax({
     data: formData,
     success: function(data) {
         console.log(data);
-        console.log(data.potential_voter_matches)
+        console.log(potential_voter_matches[0]['cell.tsmart_wireless_phone']);
     }
 });
 // var voters = <?php echo $r; ?>;
