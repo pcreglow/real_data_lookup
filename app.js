@@ -12,7 +12,7 @@ $.ajax({
     success: function(response) {
         console.log(response);
         var data_lookup = [];
-        data_lookup.push(response.potential_voter_matches);
+        data_lookup.push(response);
 
         // $.each(data_lookup.potential_voter_matches, function(key, value) {
         //   alert(potential_voter_matches[0]['vb.tsmart_first_name']);
@@ -25,6 +25,7 @@ $.ajax({
         // console.log(potential_matches[0]['vb.tsmart_first_name']);
         // console.log(potential_matches[0]['vb.tsmart_last_name']);
     }
+   console.log(data_lookup);
 });
 
 // for (i = 0; i <= potential_matches.length; i++) {
