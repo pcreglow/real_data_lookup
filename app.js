@@ -28,7 +28,7 @@ $.ajax({
 });
 
 console.log(data_lookup);
-var voter_match = data_lookup.potential_voter_matches;
+var voter_match = data_lookup.potential_voter_matches[0];
 console.log(voter_match);
 
 // for (i = 0; i <= potential_matches.length; i++) {
