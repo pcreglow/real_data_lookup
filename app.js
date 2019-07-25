@@ -11,12 +11,11 @@ $.ajax({
     url: "ts_data.php",
     data: formData,
     success: function(response) {
-      var voter = "";
-      var jsondata = JSON.parse(response);
-      for(var x=0; x<jsonData.length; x++){
-          content += jsondata[x].potential_voter_matches;
+      var voter = response;
+      for(var x=0; x<voter.length; x++){
+          content += voter[x].potential_voter_matches;
           content += "<br>";
-          content += jsondata[x].potential_voter_matches[0]['cell.tsmart_wireless_phone'];
+          content += voter[x].potential_voter_matches[0]['cell.tsmart_wireless_phone'];
           content += "<br>";
       }
       console.log(content);
