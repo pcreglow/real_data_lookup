@@ -5,13 +5,13 @@ $('#real_search').submit(function(e) {
         e.preventDefault();
 var formData = $('#real_search').serialize();
 console.log(formData);
+var data_lookup = [];
 $.ajax({
     type: "GET",
     url: "ts_data.php",
     data: formData,
     success: function(response) {
         console.log(response);
-        var data_lookup = [];
         data_lookup.push(response);
 
         // $.each(data_lookup.potential_voter_matches, function(key, value) {
