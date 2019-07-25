@@ -5,7 +5,8 @@ $('#real_search').submit(function(e) {
         e.preventDefault();
 $.ajax({
     type: "GET",
-    url: 'https://github.com/pcreglow/real_data_lookup/blob/master/ts_data.php',
+    url: "ts_data.php",
+    headers: {'Access-Control-Allow-Origin': '*'},
     data: {
         first_name: 'Phillip',
         last_name: 'Creglow',
@@ -28,8 +29,8 @@ $.ajax({
 //     var row = '<tr><td>' + first_name + '</td><td>' + last_name + '</td></tr>';
 //     jQuery('#table-container').append(row);
 // }
-
-//jQuery('#voter-results').append('<table>' + variable + '</table>')
+//
+// jQuery('#voter-results').append('<table>' + variable + '</table>')
 });
 });
 });
