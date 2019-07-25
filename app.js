@@ -14,10 +14,10 @@ $.ajax({
         var data_lookup = [];
         data_lookup.push(response);
         // console.log(data_lookup);
-        console.log(data_lookup.potential_voter_matches);
-        $.each(data_lookup.potential_voter_matches, function(key, value) {
-          alert(potential_voter_matches[0]['vb.tsmart_first_name']);
-        })
+        console.log(data_lookup.potential_voter_matches[0]);
+        // $.each(data_lookup.potential_voter_matches, function(key, value) {
+        //   alert(potential_voter_matches[0]['vb.tsmart_first_name']);
+        // })
         // console.log(potential_voter_matches);
         // console.log(potential_voter_matches[0]['cell.tsmart_wireless_phone']);
         // console.log(data_json.potential_voter_matches);
