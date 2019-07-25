@@ -11,7 +11,9 @@ $.ajax({
     data: formData,
     success: function(response) {
         console.log(response);
-        alert(response.potential_voter_matches);
+        $.each(response.potential_voter_matches, function(key, value) {
+          alert(potential_matches[0]['vb.tsmart_first_name']);
+        });
         // console.log(potential_voter_matches);
         // console.log(potential_voter_matches[0]['cell.tsmart_wireless_phone']);
         // console.log(data_json.potential_voter_matches);
