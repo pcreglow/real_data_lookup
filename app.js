@@ -9,8 +9,9 @@ $.ajax({
     type: "GET",
     url: "ts_data.php",
     data: formData,
-    success: function(data) {
-        console.log(data);
+    success: function(response) {
+        console.log(response);
+        alert(response.potential_voter_matches);
         // console.log(potential_voter_matches);
         // console.log(potential_voter_matches[0]['cell.tsmart_wireless_phone']);
         // console.log(data_json.potential_voter_matches);
@@ -20,13 +21,7 @@ $.ajax({
         // console.log(potential_matches[0]['vb.tsmart_last_name']);
     }
 });
-$.getJSON("ts_data.php", function(data) {
-   console.log(data);
-   console.log(potential_voter_matches);
-   console.log(potential_voter_matches[0]);
-   console.log(data.potential_voter_matches);
-   console.log(data.potential_voter_matches[0]);
-});
+
 // for (i = 0; i <= potential_matches.length; i++) {
 //     var first_name = potential_matches[i]['vb.tsmart_first_name'];
 //     var last_name = potential_matches[i]['vb.tsmart_last_name'];
