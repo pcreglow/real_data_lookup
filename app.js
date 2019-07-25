@@ -25,8 +25,9 @@ $.ajax({
         // console.log(potential_matches[0]['vb.tsmart_first_name']);
         // console.log(potential_matches[0]['vb.tsmart_last_name']);
     }
-   console.log(data_lookup);
 });
+
+console.log(data_lookup);
 
 // for (i = 0; i <= potential_matches.length; i++) {
 //     var first_name = potential_matches[i]['vb.tsmart_first_name'];
