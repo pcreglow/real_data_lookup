@@ -28,6 +28,8 @@ $.ajax({
 });
 
 console.log(data_lookup);
+var voter_match = data_lookup.potential_voter_matches;
+console.log(voter_match);
 
 // for (i = 0; i <= potential_matches.length; i++) {
 //     var first_name = potential_matches[i]['vb.tsmart_first_name'];
