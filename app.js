@@ -11,7 +11,7 @@ $.ajax({
     url: "ts_data.php",
     data: formData,
     success: function(response) {
-        console.log(response);
+        alert(response);
         data_lookup.push(response);
 
         // $.each(data_lookup.potential_voter_matches, function(key, value) {
