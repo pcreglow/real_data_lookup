@@ -11,8 +11,9 @@ $.ajax({
     data: formData,
     success: function(response) {
         console.log(response);
-        var data_lookup = response;
-        console.log(data_lookup.potential_voter_matches);
+        var data_lookup = [];
+        data_lookup.push(response);
+        console.log(data_lookup);
         $.each(data_lookup.potential_voter_matches, function(key, value) {
           alert(potential_voter_matches[0]['vb.tsmart_first_name']);
         })
