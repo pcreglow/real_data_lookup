@@ -11,8 +11,8 @@ $.ajax({
     data: formData,
     success: function(data) {
         console.log(data);
-        console.log(data[0]);
-        console.log(data[0]['cell.tsmart_wireless_phone'])
+        console.log(data.potential_voter_matches[0]);
+        console.log(data.potential_voter_matches[0]['cell.tsmart_wireless_phone'];
         // console.log(data_json.potential_voter_matches);
         // var potential_matches = data_json.potential_voter_matches;
         // console.log(potential_matches[0]['cell.tsmart_wireless_phone']);
