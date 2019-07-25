@@ -11,8 +11,9 @@ $.ajax({
     url: "ts_data.php",
     data: formData,
     success: function(response) {
-        alert(response);
-        data_lookup.push(response);
+        console.log(response);
+        var Data = $.parseJSON(response);
+        data_lookup.push(Data);
 
         // $.each(data_lookup.potential_voter_matches, function(key, value) {
         //   alert(potential_voter_matches[0]['vb.tsmart_first_name']);
