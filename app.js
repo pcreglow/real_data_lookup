@@ -10,13 +10,14 @@ $.ajax({
     url: "ts_data.php",
     data: formData,
     success: function(data) {
-        var data_json = JSON.parse(data);
-        console.log(data_json);
-        console.log(data_json.potential_voter_matches);
-        var potential_matches = data_json.potential_voter_matches;
-        console.log(potential_matches[0]['cell.tsmart_wireless_phone']);
-        console.log(potential_matches[0]['vb.tsmart_first_name']);
-        console.log(potential_matches[0]['vb.tsmart_last_name']);
+        console.log(data);
+        console.log(data[0]);
+        console.log(data[0]['cell.tsmart_wireless_phone'])
+        // console.log(data_json.potential_voter_matches);
+        // var potential_matches = data_json.potential_voter_matches;
+        // console.log(potential_matches[0]['cell.tsmart_wireless_phone']);
+        // console.log(potential_matches[0]['vb.tsmart_first_name']);
+        // console.log(potential_matches[0]['vb.tsmart_last_name']);
     }
 });
 
