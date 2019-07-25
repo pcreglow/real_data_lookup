@@ -12,9 +12,8 @@ $.ajax({
     success: function(response) {
         console.log(response);
         var data_lookup = [];
-        data_lookup.push(response);
-        // console.log(data_lookup);
-        console.log(data_lookup.potential_voter_matches[0]);
+        data_lookup.push(response.potential_voter_matches);
+
         // $.each(data_lookup.potential_voter_matches, function(key, value) {
         //   alert(potential_voter_matches[0]['vb.tsmart_first_name']);
         // })
