@@ -10,9 +10,11 @@ $.ajax({
     type: "GET",
     url: "ts_data.php",
     data: formData,
+    contentType: "application/json; charset=utf-8",
     success: function(response) {
-      var voter = response;
-      console.log(voter);
+      var voter = JSON.parse(response);
+      //console.log(voter);
+      console.log(voter.potential_voter_matches[0]['cell.tsmart_wireless_phone']);
         // $.each(data_lookup.potential_voter_matches, function(key, value) {
         //   alert(potential_voter_matches[0]['vb.tsmart_first_name']);
         // })
