@@ -26,24 +26,9 @@ function voterData(data_lookup){
     console.log(voter_response[i]['vb.tsmart_last_name']);
     var first_name = voter_response[i]['vb.tsmart_first_name'];
     var last_name = voter_response[i]['vb.tsmart_last_name'];
-    var row = '<tr><td>' + first_name + '</td><td>' + last_name + '</td></tr>';
-    var buildTable = $('#table-container').append(row);
+    var row = '<h4>' + first_name + ' ' + last_name + '</h4>';
+    $('#voter-results').append(row);
   }
-
-  $('#voter-results').append('<table>' + buildTable + '</table>');
-
-  // $.each(voter_response, function(i, item) {
-  //   console.log(this.['vb.tsmart_first_name']);
-  //   console.log(this.['vb.tsmart_last_name']);
-  //  });
- //  for (i = 0; i <= voter_response.length; i++) {
- //     var first_name = voter_response[i]['vb.tsmart_first_name'];
- //     var last_name = voter_response[i]['vb.tsmart_last_name'];
- //     var row = '<tr><td>' + first_name + '</td><td>' + last_name + '</td></tr>';
- //     jQuery('#table-container').append(row);
- // }
- // jQuery('#voter-results').append('<table>' + variable + '</table>')
-
  }
 });
 });
