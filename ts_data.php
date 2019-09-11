@@ -44,5 +44,5 @@ $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
 //echo '\nRESPONSE....................................';
 curl_close($ch);
-echo json_decode($r);
+echo $r;
 ?>
