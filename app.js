@@ -29,8 +29,8 @@ function voterData(data_lookup){
  // }
  // jQuery('#voter-results').append('<table>' + variable + '</table>')
  $.each(voter_response, function () {
-     console.log(['vb.tsmart_first_name'])
-     console.log(['vb.tsmart_last_name'])
+     console.log([voter_response]['vb.tsmart_first_name']);
+     console.log([voter_response]['vb.tsmart_last_name']);
   });
  }
 });
