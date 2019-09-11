@@ -10,11 +10,11 @@ $.ajax({
     type: "GET",
     url: "ts_data.php",
     //data: formData,
-    data : JSON.stringify(formData),
+    data : JSON.parse(formData),
     contentType: "application/json; charset=utf-8",
     success: function(response) {
       //var voter = JSON.parse(response);
-      alert(response.success); 
+      alert(response.success);
       console.log(response);
       console.log(response.input);
       console.log(data_lookup);
