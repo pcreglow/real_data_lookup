@@ -28,8 +28,10 @@ $.ajax({
 function voterData(data_lookup){
   console.log(data_lookup);
   console.log(data_lookup[0]);
-  var voter = data_lookup[0];
-  console.log(voter.potential_voter_matches);
+  var voters = JSON.parse(data_lookup);
+  var voter = JSON.parse(data_lookup[0]);
+  console.log(voters);
+  console.log(voter);
   //console.log(data_lookup.potential_voter_matches);
   //var voters = JSON.parse(data_lookup);
   //console.log(voters);
