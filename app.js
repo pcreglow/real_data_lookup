@@ -12,8 +12,9 @@ $.ajax({
     data: formData,
     contentType: "application/json; charset=utf-8",
     success: function(response) {
-        console.log(response);
-        data_lookup.push(response);
+        var voters = JSON.parse(response);
+        console.log(voters);
+        data_lookup.push(voters);
         voterData(data_lookup);
         // $.each(data_lookup.potential_voter_matches, function(key, value) {
         //   alert(potential_voter_matches[0]['vb.tsmart_first_name']);
