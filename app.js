@@ -3,7 +3,8 @@ $(document).ready(function() {
 // write your code here
 $('#real_search').submit(function(e) {
         e.preventDefault();
-var formData = $('#real_search').serialize();
+//var formData = $('#real_search').serialize();
+var formData = $('#real_search');
 console.log(formData);
 var data_lookup = [];
 $.ajax({
