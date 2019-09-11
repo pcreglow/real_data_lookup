@@ -22,7 +22,7 @@ function voterData(data_lookup){
   console.log(voter_response.length);
   console.log(voter_response[0]['ts.tsmart_presidential_primary_turnout_score']);
 
-  for (i = 0; i <= vvoter_response.length; i++) {
+  for (i = 0; i <= voter_response.length; i++) {
     console.log(voter_response[i]['ts.tsmart_presidential_primary_turnout_score']);
     console.log(voter_response[i]['vb.tsmart_last_name']);
   }
