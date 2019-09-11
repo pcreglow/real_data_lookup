@@ -5,7 +5,6 @@ $('#real_search').submit(function(e) {
         e.preventDefault();
 var formData = $('#real_search').serialize();
 console.log(formData);
-function getJSON() {
 var data_lookup = [];
 $.ajax({
     type: "GET",
@@ -29,9 +28,8 @@ $.ajax({
         // console.log(potential_matches[0]['vb.tsmart_last_name']);
     }
  })
-}
 
-function voterData(data_lookup) {
+function voterData(data_lookup){
   console.log(data_lookup);
 }
 
