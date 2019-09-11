@@ -21,7 +21,7 @@ function voterData(data_lookup){
   console.log(voter_response);
   console.log(voter_response.length);
   console.log(voter_response[0]['ts.tsmart_presidential_primary_turnout_score']);
-  $.each(voter_response, function() {
+  $.each(voter_response, function(value) {
     console.log(this.ts.tsmart_presidential_primary_turnout_score);
   });
  //  for (i = 0; i <= voter_response.length; i++) {
