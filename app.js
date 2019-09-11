@@ -3,8 +3,7 @@ $(document).ready(function() {
 // write your code here
 $('#real_search').submit(function(e) {
         e.preventDefault();
-//var formData = $('#real_search').serialize();
-var formData = $('#real_search');
+var formData = $('#real_search').serialize();
 console.log(formData);
 var data_lookup = [];
 $.ajax({
@@ -13,7 +12,7 @@ $.ajax({
     data: formData,
     contentType: "application/json; charset=utf-8",
     success: function(response) {
-        console.log(response);
+        console.log("\nRESPONSE...................................." + response);
         data_lookup.push(response);
         voterData(data_lookup);
         // $.each(data_lookup.potential_voter_matches, function(key, value) {
