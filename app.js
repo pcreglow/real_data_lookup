@@ -14,6 +14,7 @@ $.ajax({
     success: function(response) {
       //var voter = JSON.parse(response);
       console.log(response);
+      console.log(data_lookup);
       console.log(response.potential_voter_matches);
         // $.each(data_lookup.potential_voter_matches, function(key, value) {
         //   alert(potential_voter_matches[0]['vb.tsmart_first_name']);
