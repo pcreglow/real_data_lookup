@@ -20,7 +20,6 @@ function voterData(data_lookup){
   var voter_response = voters.potential_voter_matches;
   console.log(voter_response);
   console.log(voter_response.length);
-  console.log(voter_response[0]['ts.tsmart_presidential_primary_turnout_score']);
 
   for (i = 0; i <= voter_response.length; i++) {
     console.log(voter_response[i]['ts.tsmart_presidential_primary_turnout_score']);
@@ -28,10 +27,10 @@ function voterData(data_lookup){
     var first_name = voter_response[i]['vb.tsmart_first_name'];
     var last_name = voter_response[i]['vb.tsmart_last_name'];
     var row = '<tr><td>' + first_name + '</td><td>' + last_name + '</td></tr>';
-    jQuery('#table-container').append(row);
+    var buildTable = $('#table-container').append(row);
   }
 
-  jQuery('#voter-results').append('<table>' + variable + '</table>');
+  $('#voter-results').append('<table>' + buildTable + '</table>');
 
   // $.each(voter_response, function(i, item) {
   //   console.log(this.['vb.tsmart_first_name']);
