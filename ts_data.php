@@ -37,8 +37,8 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'x-api-key: ' . $apikey));
 
 // ************* SEND THE REQUEST *************
-echo '\nBEGIN REQUEST....................................';
-echo 'Request URL = ' . $request_url;
+//echo '\nBEGIN REQUEST....................................';
+//echo 'Request URL = ' . $request_url;
 $r = curl_exec($ch);
 $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
