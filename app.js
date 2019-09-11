@@ -9,10 +9,12 @@ var data_lookup = [];
 $.ajax({
     type: "GET",
     url: "ts_data.php",
-    data: formData,
+    //data: formData,
+    data : JSON.stringify(formData),
     contentType: "application/json; charset=utf-8",
     success: function(response) {
       //var voter = JSON.parse(response);
+      alert(response.success); 
       console.log(response);
       console.log(response.input);
       console.log(data_lookup);
