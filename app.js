@@ -21,10 +21,10 @@ function voterData(data_lookup){
   console.log(voter_response);
   console.log(voter_response.length);
 
-  for (i = 0; i <= voter_response.length; i++) {
+  for (i = 0; i = voter_response.length; i++) {
     console.log(voter_response[i]['vb.tsmart_first_name']);
     console.log(voter_response[i]['vb.tsmart_last_name']);
-  }
+  };
     var first_name = voter_response[i]['vb.tsmart_first_name'];
     var last_name = voter_response[i]['vb.tsmart_last_name'];
     var row = '<h4>' + first_name + ' ' + last_name + '</h4>';
