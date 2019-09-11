@@ -12,9 +12,9 @@ $.ajax({
     data: formData,
     contentType: "application/json; charset=utf-8",
     success: function(response) {
-      var voter = JSON.parse(response);
-      console.log(voter);
-      console.log(voter.potential_voter_matches[0]);
+      //var voter = JSON.parse(response);
+      console.log(response);
+      console.log(response.potential_voter_matches);
         // $.each(data_lookup.potential_voter_matches, function(key, value) {
         //   alert(potential_voter_matches[0]['vb.tsmart_first_name']);
         // })
@@ -28,7 +28,7 @@ $.ajax({
     }
 });
 
-console.log(data_lookup);
+//console.log(data_lookup);
 
 
 // for (i = 0; i <= potential_matches.length; i++) {
