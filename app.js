@@ -30,7 +30,7 @@ function voterData(data_lookup){
  // jQuery('#voter-results').append('<table>' + variable + '</table>')
  $.each(voter_response, function () {
   $.each(this, function (name, value) {
-    console.log(name + '=' + value);
+    console.log(['vb.tsmart_last_name'] + ':' + value);
   });
   });
  }
