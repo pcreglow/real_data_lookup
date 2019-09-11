@@ -5,14 +5,18 @@ $('#real_search').submit(function(e) {
         e.preventDefault();
 var formData = $('#real_search').serialize();
 console.log(formData);
+function getJSON() {
 var data_lookup = [];
 $.ajax({
     type: "GET",
     url: "ts_data.php",
     data: formData,
-    contentType: "application/json; charset=utf-8",
+    dataType: 'jsonp',
+    //contentType: "application/json; charset=utf-8",
     success: function(response) {
         console.log(response);
+        data_lookup.push(response);
+        voterData(data_lookup);
         // $.each(data_lookup.potential_voter_matches, function(key, value) {
         //   alert(potential_voter_matches[0]['vb.tsmart_first_name']);
         // })
@@ -24,9 +28,12 @@ $.ajax({
         // console.log(potential_matches[0]['vb.tsmart_first_name']);
         // console.log(potential_matches[0]['vb.tsmart_last_name']);
     }
-});
+ })
+}
 
-console.log(data_lookup);
+function voterData(data_lookup) {
+  console.log(data_lookup);
+}
 
 
 // for (i = 0; i <= potential_matches.length; i++) {
