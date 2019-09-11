@@ -10,10 +10,7 @@ $.ajax({
     type: "GET",
     url: "ts_data.php",
     data: formData,
-    contentType: "application/json; charset=utf-8",
     success: function(response) {
-        var voters = JSON.parse(response);
-        console.log(voters);
         data_lookup.push(voters);
         voterData(data_lookup);
         // $.each(data_lookup.potential_voter_matches, function(key, value) {
@@ -30,7 +27,6 @@ $.ajax({
  })
 function voterData(data_lookup){
   console.log(data_lookup);
-  console.log(data_lookup[0]['potential_voter_matches']);
   //console.log(data_lookup.potential_voter_matches);
   //var voters = JSON.parse(data_lookup);
   //console.log(voters);
