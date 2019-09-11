@@ -32,7 +32,7 @@ function voterData(data_lookup){
      jQuery('#table-container').append(row);
  }
  jQuery('#voter-results').append('<table>' + variable + '</table>')
-]
+}
 });
 });
 });
