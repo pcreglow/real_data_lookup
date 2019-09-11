@@ -10,6 +10,7 @@ $.ajax({
     type: "GET",
     url: "ts_data.php",
     data: formData,
+    dataType: "jsonp",
     contentType: "application/json; charset=utf-8",
     success: function(response) {
         console.log(response);
