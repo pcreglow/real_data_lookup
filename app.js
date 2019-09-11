@@ -28,7 +28,8 @@ $.ajax({
 function voterData(data_lookup){
   console.log(data_lookup);
   var voters = JSON.parse(data_lookup);
-  console.log(voters.potential_voter_matches);
+  var voter_data = voters.potential_voter_matches;
+  console.log(voter_data[0]['ts.tsmart_presidential_primary_turnout_score']);
   //console.log(data_lookup.potential_voter_matches);
   //var voters = JSON.parse(data_lookup);
   //console.log(voters);
