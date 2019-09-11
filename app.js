@@ -11,7 +11,7 @@ $.ajax({
     url: "ts_data.php",
     data: formData,
     dataType: 'jsonp',
-    //contentType: "application/json; charset=utf-8",
+    contentType: "application/json; charset=utf-8",
     success: function(response) {
         console.log(response);
         data_lookup.push(response);
@@ -27,8 +27,7 @@ $.ajax({
         // console.log(potential_matches[0]['vb.tsmart_first_name']);
         // console.log(potential_matches[0]['vb.tsmart_last_name']);
     }
- })
-
+ });
 function voterData(data_lookup){
   var voters = JSON.parse(data_lookup);
   console.log(voters);
