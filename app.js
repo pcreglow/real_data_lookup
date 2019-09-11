@@ -18,21 +18,17 @@ $.ajax({
 function voterData(data_lookup){
   var voters = JSON.parse(data_lookup);
   var voter_response = voters.potential_voter_matches;
+  console.log(voter_response);
+  console.lpg(voter_response.length);
   console.log(voter_response[0]['ts.tsmart_presidential_primary_turnout_score']);
-  //console.log(data_lookup.potential_voter_matches);
-  //var voters = JSON.parse(data_lookup);
-  //console.log(voters);
-
-
-
- for (i = 0; i <= voter_response.length; i++) {
+  for (i = 0; i <= voter_response.length; i++) {
      var first_name = voter_response[i]['vb.tsmart_first_name'];
      var last_name = voter_response[i]['vb.tsmart_last_name'];
      var row = '<tr><td>' + first_name + '</td><td>' + last_name + '</td></tr>';
      jQuery('#table-container').append(row);
  }
  jQuery('#voter-results').append('<table>' + variable + '</table>')
-}
+ }
 });
 });
 });
