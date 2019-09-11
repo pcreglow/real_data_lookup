@@ -27,10 +27,10 @@ function voterData(data_lookup){
     console.log(voter_response[i]['vb.tsmart_last_name']);
   }
 
-  $.each(voter_response, function(i, item) {
-    console.log(this.['vb.tsmart_first_name']);
-    console.log(this.['vb.tsmart_last_name']);
-   });
+  // $.each(voter_response, function(i, item) {
+  //   console.log(this.['vb.tsmart_first_name']);
+  //   console.log(this.['vb.tsmart_last_name']);
+  //  });
  //  for (i = 0; i <= voter_response.length; i++) {
  //     var first_name = voter_response[i]['vb.tsmart_first_name'];
  //     var last_name = voter_response[i]['vb.tsmart_last_name'];
