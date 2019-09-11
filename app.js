@@ -13,37 +13,26 @@ $.ajax({
     success: function(response) {
         data_lookup.push(response);
         voterData(data_lookup);
-        // $.each(data_lookup.potential_voter_matches, function(key, value) {
-        //   alert(potential_voter_matches[0]['vb.tsmart_first_name']);
-        // })
-        // console.log(potential_voter_matches);
-        // console.log(potential_voter_matches[0]['cell.tsmart_wireless_phone']);
-        // console.log(data_json.potential_voter_matches);
-        // var potential_matches = data_json.potential_voter_matches;
-        // console.log(potential_matches[0]['cell.tsmart_wireless_phone']);
-        // console.log(potential_matches[0]['vb.tsmart_first_name']);
-        // console.log(potential_matches[0]['vb.tsmart_last_name']);
     }
  })
 function voterData(data_lookup){
-  console.log(data_lookup);
   var voters = JSON.parse(data_lookup);
-  var voter_data = voters.potential_voter_matches;
-  console.log(voter_data[0]['ts.tsmart_presidential_primary_turnout_score']);
+  var voter_response = voters.potential_voter_matches;
+  console.log(voter_response[0]['ts.tsmart_presidential_primary_turnout_score']);
   //console.log(data_lookup.potential_voter_matches);
   //var voters = JSON.parse(data_lookup);
   //console.log(voters);
-}
 
 
-// for (i = 0; i <= potential_matches.length; i++) {
-//     var first_name = potential_matches[i]['vb.tsmart_first_name'];
-//     var last_name = potential_matches[i]['vb.tsmart_last_name'];
-//     var row = '<tr><td>' + first_name + '</td><td>' + last_name + '</td></tr>';
-//     jQuery('#table-container').append(row);
-// }
-//
-// jQuery('#voter-results').append('<table>' + variable + '</table>')
+
+ for (i = 0; i <= voter_response.length; i++) {
+     var first_name = voter_response[i]['vb.tsmart_first_name'];
+     var last_name = voter_response[i]['vb.tsmart_last_name'];
+     var row = '<tr><td>' + first_name + '</td><td>' + last_name + '</td></tr>';
+     jQuery('#table-container').append(row);
+ }
+ jQuery('#voter-results').append('<table>' + variable + '</table>')
+]
 });
 });
 });
